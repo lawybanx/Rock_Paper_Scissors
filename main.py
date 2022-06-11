@@ -17,7 +17,7 @@ You have three choices;
 Rock(R), Paper(P), Scissors(S)
 ____________________________________________
     ''')
-    player = input('Enter your Choice ("R", "P" or "S"): ').upper()
+    player = input('\nEnter your Choice ("R", "P" or "S"): ').upper()
 
     is_running = True
 
@@ -25,22 +25,22 @@ ____________________________________________
         cpu = choice(game_choice)
 
         if player not in game_choice:
-            print("Invalid choice, Try again")
-            player = input('Enter your Choice ("R", "P" or "S"): ').upper()
+            print("\nInvalid choice, Try again")
+            player = input('\nEnter your Choice ("R", "P" or "S"): ').upper()
 
         elif player == cpu:
-            print(f"Player({choice_name[player]}) : CPU ({choice_name[cpu]})")
-            print("It's a Tie, Try again")
-            player = input('Enter your Choice ("R", "P" or "S"): ').upper()
+            print(f"\nPlayer({choice_name[player]}) : CPU ({choice_name[cpu]})")
+            print("\nIt's a Tie, Try again")
+            player = input('\nEnter your Choice ("R", "P" or "S"): ').upper()
 
         elif player == "R" and cpu == "S" or player == "P" and cpu == "R" or player == "S" and cpu == "P":
-            print(f"Player({choice_name[player]}) : CPU ({choice_name[cpu]})")
-            print(f"Player Wins: {choice_name[player]} beats {choice_name[cpu]}")
+            print(f"\nPlayer({choice_name[player]}) : CPU ({choice_name[cpu]})")
+            print(f"\nPlayer Wins: {choice_name[player]} beats {choice_name[cpu]}")
             is_running = False
 
         else:
-            print(f"Player({choice_name[player]}) : CPU ({choice_name[cpu]})")
-            print(f"Computer Wins: {choice_name[cpu]} beats {choice_name[player]}")
+            print(f"\nPlayer({choice_name[player]}) : CPU ({choice_name[cpu]})")
+            print(f"\nComputer Wins: {choice_name[cpu]} beats {choice_name[player]}")
             is_running = False
 
 
@@ -48,13 +48,13 @@ def play_game():
     play = True
     rock_paper_scissors()
     while play:
-        continue_game = input("Do you wish to play again (Y) or (N)? ").upper()
+        continue_game = input("\nDo you wish to play again (Y) or (N)? ").upper()
         if continue_game == "N":
             play = False
         elif continue_game == "Y":
             rock_paper_scissors()
         else:
-            print("Sorry, I didn't catch that")
+            print("\nSorry, I didn't catch that")
             continue
 
 
